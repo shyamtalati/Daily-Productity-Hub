@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Daily Productivity Hub</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Daily Productivity Hub</h1>
+    </header>
+
+    <main>
+        <!-- Greeting and Tasks Row -->
+        <section id="greeting-section">
+            <h2 id="greeting"></h2>
+            <button id="changeNameBtn">Change Name</button>
+            <div class="date-weather">
+                <p id="currentDate"></p>
+                <p id="weather"></p>
+            </div>
+            <p id="quote"></p>
+            <p style="font-size:0.9rem; color:#555;">*Notes, classes, and tasks are saved automatically.</p>
+        </section>
+
+        <section id="tasks-section">
+            <h2>Your Tasks</h2>
+            <div id="taskForm">
+                <input type="text" id="newTaskInput" placeholder="Add new task..." />
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+            <ul id="taskList"></ul>
+        </section>
+
+        <!-- Schedule and Notes Row -->
+        <section id="schedule-section">
+            <h2>Weekly Class Schedule</h2>
+            <form id="classForm">
+                <input type="text" id="className" placeholder="Class Name" required>
+                <input type="text" id="location" placeholder="Location" required>
+                <label>Start Date: <input type="date" id="classStartDate" required></label>
+                <label>End Date: <input type="date" id="classEndDate" required></label>
+                <div class="days-input">
+                    <label><input type="checkbox" name="days" value="Mon">Mon</label>
+                    <label><input type="checkbox" name="days" value="Tue">Tue</label>
+                    <label><input type="checkbox" name="days" value="Wed">Wed</label>
+                    <label><input type="checkbox" name="days" value="Thu">Thu</label>
+                    <label><input type="checkbox" name="days" value="Fri">Fri</label>
+                </div>
+                <div class="time-inputs">
+                    <label>Start: <input type="time" id="startTime" required></label>
+                    <label>End: <input type="time" id="endTime" required></label>
+                </div>
+                <button type="submit">Add Class</button>
+            </form>
+
+            <div class="week-navigation">
+                <button id="prevWeekBtn">Previous Week</button>
+                <button id="nextWeekBtn">Next Week</button>
+            </div>
+
+            <div class="schedule-grid" id="scheduleGrid"></div>
+
+            <h3>All Classes</h3>
+            <ul id="classList"></ul>
+        </section>
+
+        <section id="notes-section">
+            <h2>Notes</h2>
+            <textarea id="notesArea" placeholder="Write your notes here..."></textarea>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Daily Productivity Hub</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
